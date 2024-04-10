@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Proyecto EPX</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="3a12ce9978ef7f31a21fa218b80062b4da28715b9f61fe51a8b9f02c08d8c149.html">Doc Electronico Combinado</a></span>
+                > <span class="truncate-60"><a
+                    href="c1ec0ff0d0676b2e485de05795cb0c5d6877a7c17e1bf35bcf39ea633e6ff2b8.html">Se valida la opci&oacute;n documento electronico basico combinado </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="dafb266f68444cb7f2451c923d70c1428ac45470c361842b818e6daa9bcd4fa8.html"><i class="bi bi-chat-text"></i> Themes</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 09-04-2024 15:13</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Doc Electronico Combinado </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="e028d54b739fe380524e8cd5f5e6993f02dca79d86bf095415a54529c3268ac8.html">Doc Electronico Combinado Basico
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="8ce8d84e526730d3959a91bfb2b9cb98bae56910870fb83a48e0fef1b1288f94.html">Prueba Presentacion
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="328c25df75ca1081ab7977e839998c56cdbc329bdcf763306ff10b11a82394f0.html">Documento Electronico
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6fe0671aeea9e76b6998ee682216d11c7748a4152740df0586f3c256ecb3f5da.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f55cf301e8f51d63aebeb8bc8dbe880df940586e2a502c7a3e24c2b639523f8f.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="219bfa358fafea3a1f3bbfaaac233c5386e684a0464d5a1d9447b973d8cbeb41.html">Documento Electronico Combinado
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="773a571d092c5846a3019576b732f5fa2a9b129891c011c10cda8839a7f193e0.html">Regresion
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="59736924e81ea98f655ac8eba7cd96079d8d80131e0c4360daf32a724d0b38a0.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Se valida la opci&oacute;n documento electronico basico combinado
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">When Se diligencia los campos de Nuevo Documento Datos &lt;fila&gt;<br><table class='embedded'><thead><th>Ruta Excel</th><th>Pestana</th></thead><tbody><tr><td>src/test/resources/data/ecm/documentoElectronico/docElectronico.xlsx</td><td>conSubSerie</td></tr></tbody></table><br>And Seleccionamos combinar correspondencia<br>And Seleccionamos segundo destinatario &lt;destinatarios&gt;<br>And Se da clic en guardar<br>And Se guarda el numero con el que quedo el documento<br>And Se selecciona el medio de respuesta en Meta Datos<br>Then Se valida que se guardo correctamente los metadatos<br>When Se da clic en Documento<br>And Se da clic en aprobar<br>Then Se valida la aprobacion exitosa<br>When Se da clic en el boton radicar documento electronico<br>Then Se valida las radicaciones exitosas</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="7e3733cf964bab5ccab4a751b84a0eb52c74e935f8e62475d8b64f26bec945a6.png" title=" 1: Se valida la opci&oacute;n documento electronico basico combinado ({fila=2, destinatarios=AUT ALEX})" width="1920"/>
+                <img src="7e3733cf964bab5ccab4a751b84a0eb52c74e935f8e62475d8b64f26bec945a6.png" title=" Given Se ingresa a la url de ECM" width="1920"/>
+                <img src="7e3733cf964bab5ccab4a751b84a0eb52c74e935f8e62475d8b64f26bec945a6.png" title=" Actor browse" width="1920"/>
+                <img src="7e3733cf964bab5ccab4a751b84a0eb52c74e935f8e62475d8b64f26bec945a6.png" title=" actor opens the browser at https://epxstandardcoretesting2.azurewebsites.net/" width="1920"/>
+                <img src="7e3733cf964bab5ccab4a751b84a0eb52c74e935f8e62475d8b64f26bec945a6.png" title=" Actor browse (completed)" width="1920"/>
+                <img src="7e3733cf964bab5ccab4a751b84a0eb52c74e935f8e62475d8b64f26bec945a6.png" title=" Given Se ingresa a la url de ECM (completed)" width="1920"/>
+                <img src="9a4c3f52f5fbcf35c4f5e76738861a8786704e53fb862bb554af838c8ccd424e.png" title=" When Se digita automatizador y 123" width="1920"/>
+                <img src="9a4c3f52f5fbcf35c4f5e76738861a8786704e53fb862bb554af838c8ccd424e.png" title=" Actor incio de sesion datos feature task" width="1920"/>
+                <img src="9a4c3f52f5fbcf35c4f5e76738861a8786704e53fb862bb554af838c8ccd424e.png" title=" actor enters 'automatizador' into Se ingresa el nombre del usuario para ingresar" width="1920"/>
+                <img src="fdd1950f3ab64efd21f56164bdc62b1671088662e6b67fa1180bfc6968b6da32.png" title=" actor clicks on Se ingresa la contrase&ntilde;a" width="1920"/>
+                <img src="429667d103fd4494f8a05afc7bd71f949919144c681c4f19322409de9e6d8a4e.png" title=" actor enters '123' into Se ingresa la contrase&ntilde;a" width="1920"/>
+                <img src="5485a4986c2b464846a5444a7d28052b160b34a30ffdcc52ec614ee9c161a2f9.png" title=" actor clicks on Se da click en el boton ingreso" width="1920"/>
+                <img src="5485a4986c2b464846a5444a7d28052b160b34a30ffdcc52ec614ee9c161a2f9.png" title=" Actor incio de sesion datos feature task (completed)" width="1920"/>
+                <img src="5485a4986c2b464846a5444a7d28052b160b34a30ffdcc52ec614ee9c161a2f9.png" title=" When Se digita automatizador y 123 (completed)" width="1920"/>
+                <img src="5485a4986c2b464846a5444a7d28052b160b34a30ffdcc52ec614ee9c161a2f9.png" title=" And Se da clic en el boton Documento electronico" width="1920"/>
+                <img src="5485a4986c2b464846a5444a7d28052b160b34a30ffdcc52ec614ee9c161a2f9.png" title=" Actor documento electronico task" width="1920"/>
+                <img src="5485a4986c2b464846a5444a7d28052b160b34a30ffdcc52ec614ee9c161a2f9.png" title=" Actor refrescar ventana interaction" width="1920"/>
+                <img src="f6c7f150e84c2cc7ee9f3326c5aa21592e20a77767ae57d24c220353a70444e0.png" title=" actor clicks on Boton Documento Electonico" width="1920"/>
+                <img src="f6c7f150e84c2cc7ee9f3326c5aa21592e20a77767ae57d24c220353a70444e0.png" title=" Actor documento electronico task (completed)" width="1920"/>
+                <img src="f6c7f150e84c2cc7ee9f3326c5aa21592e20a77767ae57d24c220353a70444e0.png" title=" And Se da clic en el boton Documento electronico (completed)" width="1920"/>
+                <img src="f6c7f150e84c2cc7ee9f3326c5aa21592e20a77767ae57d24c220353a70444e0.png" title=" When Se diligencia los campos de Nuevo Documento Datos 2
+| Ruta Excel | Pestana |
+| src/test/resources/data/ecm/documentoElectronico/docElectronico.xlsx | conSubSerie |" width="1920"/>
+                <img src="f6c7f150e84c2cc7ee9f3326c5aa21592e20a77767ae57d24c220353a70444e0.png" title=" Actor datos task" width="1920"/>
+                <img src="f6c7f150e84c2cc7ee9f3326c5aa21592e20a77767ae57d24c220353a70444e0.png" title=" Actor id ventana principal interaciton" width="1920"/>
+                <img src="5549f7228355d0ee9add833788e46194de8ec1f0a45ea5763eabb8091e2e178f.png" title=" actor enters 'AUT_DOC_ELC' then hits [TAB] into Tipo Documental" width="1920"/>
+                <img src="1684ba57472053d6b07822630df853b08c94371d0a192165691eb043ce99614d.png" title=" actor enters '190. AUT informes' then hits [TAB] into Serie" width="1920"/>
+                <img src="fcfd88ebd3095bdd495de47b6b4057ef4c0233f5abdea71979fc4012aa3b09b1.png" title=" actor enters '190.1. Informes generales' then hits [TAB] into Subserie" width="1920"/>
+                <img src="f4974ffd5744dc71f48017b9c5446b5981fa76a233b5df376253bb2e931959c8.png" title=" actor enters 'P&uacute;blica' then hits [TAB] into Confidencialidad" width="1920"/>
+                <img src="9c9b6dc7fe33e2631a245288f065651d795c59d34296f4fbdbe7bd84ad8be79e.png" title=" actor clicks on Firmantes" width="1920"/>
+                <img src="9c9b6dc7fe33e2631a245288f065651d795c59d34296f4fbdbe7bd84ad8be79e.png" title=" Actor cambiar ventana id interaction" width="1920"/>
+                <img src="999d77e63dbee4506327adf99dee969fe8903a11f015af267933fb223591d37b.png" title=" actor enters 'Automatizador Automatizado' into Consultar firmantes" width="840"/>
+                <img src="308d62398f85e7ef5026e46eb5c523b1ee3a9b7bb40a46d368d9e4cd0f305def.png" title=" actor clicks on Boton Usuarios" width="840"/>
+                <img src="27fd3e360d29c61d70268ae6f8db8a1ee81ebc66c0cc5c6631ed50ba5b89cac2.png" title=" Actor ventana principal id interaction" width="1920"/>
+                <img src="27fd3e360d29c61d70268ae6f8db8a1ee81ebc66c0cc5c6631ed50ba5b89cac2.png" title=" actor clicks on Boton Destinatarios" width="1920"/>
+                <img src="27fd3e360d29c61d70268ae6f8db8a1ee81ebc66c0cc5c6631ed50ba5b89cac2.png" title=" Actor cambiar ventana id interaction" width="1920"/>
+                <img src="98b0832e262073fd308c08f3053e5ce0bc6e90ffb71cec30ef09f3380e6e3ef5.png" title=" actor enters 'AUT Tony' into Consultar firmantes" width="840"/>
+                <img src="7ba16a05ecf215971147604a45e655443ee644b808912f51fa10217c7a79abc7.png" title=" actor clicks on Boton Usuarios" width="840"/>
+                <img src="83b6ddd2c1bf4511ca384ec314add3b5b582459d2c76c6e1256d09cf4d139054.png" title=" actor clicks on Boton lista de usuario" width="840"/>
+                <img src="91cbce651f47b8e1001351402cf207cb75599be33257cd0607f1ff13cb5a6486.png" title=" Actor ventana principal id interaction" width="1920"/>
+                <img src="6056bfe7efea8394bfbacc0cf1d7a5263e1fc267cbc635fd85498566d8bc83e3.png" title=" actor enters 'Prueba' into Campo asunto" width="1920"/>
+                <img src="7463d7de68042be0cfe6a49a203bfe12c8e7948aafb257f4309c9ea846cfe425.png" title=" actor enters 'Baja' then hits [TAB] into Campo asunto" width="1920"/>
+                <img src="7463d7de68042be0cfe6a49a203bfe12c8e7948aafb257f4309c9ea846cfe425.png" title=" Actor datos task (completed)" width="1920"/>
+                <img src="7463d7de68042be0cfe6a49a203bfe12c8e7948aafb257f4309c9ea846cfe425.png" title=" When Se diligencia los campos de Nuevo Documento Datos 2
+| Ruta Excel | Pestana |
+| src/test/resources/data/ecm/documentoElectronico/docElectronico.xlsx | conSubSerie | (completed)" width="1920"/>
+                <img src="b58a3771f75e55428ad305880021a93f9c23a6b590e5ab6a9dea31e6cc832068.png" title=" And Seleccionamos combinar correspondencia" width="1920"/>
+                <img src="b58a3771f75e55428ad305880021a93f9c23a6b590e5ab6a9dea31e6cc832068.png" title=" Actor seleccionar combinar correspondencia task" width="1920"/>
+                <img src="b58a3771f75e55428ad305880021a93f9c23a6b590e5ab6a9dea31e6cc832068.png" title=" actor clicks on BOTON COMBINAR CORRESPONDENCIA" width="1920"/>
+                <img src="2c36b23b9e6c4923725026cfea1840b238721df7e23dd172d4210f1c4e354215.png" title=" Actor seleccionar combinar correspondencia task (completed)" width="1920"/>
+                <img src="2c36b23b9e6c4923725026cfea1840b238721df7e23dd172d4210f1c4e354215.png" title=" And Seleccionamos combinar correspondencia (completed)" width="1920"/>
+                <img src="2c36b23b9e6c4923725026cfea1840b238721df7e23dd172d4210f1c4e354215.png" title=" And Seleccionamos segundo destinatario AUT ALEX" width="1920"/>
+                <img src="2c36b23b9e6c4923725026cfea1840b238721df7e23dd172d4210f1c4e354215.png" title=" Actor seleccionar segundo destinatario task" width="1920"/>
+                <img src="2c36b23b9e6c4923725026cfea1840b238721df7e23dd172d4210f1c4e354215.png" title=" Actor id ventana principal interaciton" width="1920"/>
+                <img src="24a1a13cdef6b8f1a6958c1ca43c2a5b647ed847fa0d12fc8bf0cd068a21ae4e.png" title=" actor clicks on Boton Destinatarios" width="1920"/>
+                <img src="bc95893da160a44c50ab0da717771eb795b62888f42ad7b37906494a4f70a8e9.png" title=" Actor cambiar ventana id interaction" width="840"/>
+                <img src="ec87622880e4af5398d4ac5517e5378fdb17e3a7f8a1891db62cfd116e818240.png" title=" actor enters 'AUT ALEX' into Consultar firmantes" width="840"/>
+                <img src="077456fb2ded830a8b494d55d961a8e88708fdd51cd62b5145eff6ad87c364c5.png" title=" actor clicks on Boton Usuarios" width="840"/>
+                <img src="972f63a90c875cba6bedf3a749507f61a8bb6392c8a7b3529d9f7f4d787a9570.png" title=" actor clicks on BOTON segundo destinartario" width="840"/>
+                <img src="24a1a13cdef6b8f1a6958c1ca43c2a5b647ed847fa0d12fc8bf0cd068a21ae4e.png" title=" Actor ventana principal id interaction" width="1920"/>
+                <img src="24a1a13cdef6b8f1a6958c1ca43c2a5b647ed847fa0d12fc8bf0cd068a21ae4e.png" title=" Actor seleccionar segundo destinatario task (completed)" width="1920"/>
+                <img src="24a1a13cdef6b8f1a6958c1ca43c2a5b647ed847fa0d12fc8bf0cd068a21ae4e.png" title=" And Seleccionamos segundo destinatario AUT ALEX (completed)" width="1920"/>
+                <img src="cff4fc7cbd7508f4d2580f30e93d8357d0f72bfc5cc2d7861b4e7a58db90db60.png" title=" And Se da clic en guardar" width="1920"/>
+                <img src="cff4fc7cbd7508f4d2580f30e93d8357d0f72bfc5cc2d7861b4e7a58db90db60.png" title=" Actor clic guardar task" width="1920"/>
+                <img src="cff4fc7cbd7508f4d2580f30e93d8357d0f72bfc5cc2d7861b4e7a58db90db60.png" title=" actor clicks on Campo asunto" width="1920"/>
+                <img src="cff4fc7cbd7508f4d2580f30e93d8357d0f72bfc5cc2d7861b4e7a58db90db60.png" title=" Actor clic guardar task (completed)" width="1920"/>
+                <img src="cff4fc7cbd7508f4d2580f30e93d8357d0f72bfc5cc2d7861b4e7a58db90db60.png" title=" And Se da clic en guardar (completed)" width="1920"/>
+                <img src="fc84c06a145a272c24eb9235763897c59956c495e78101d3fec05321f36702f2.png" title=" And Se guarda el numero con el que quedo el documento" width="1920"/>
+                <img src="fc84c06a145a272c24eb9235763897c59956c495e78101d3fec05321f36702f2.png" title=" Actor numero documento task" width="1920"/>
+                <img src="fc84c06a145a272c24eb9235763897c59956c495e78101d3fec05321f36702f2.png" title=" And Se guarda el numero con el que quedo el documento (completed)" width="1920"/>
+                <img src="75fb97ef0baed007368d78dbf85b8c51a00ef7d00e2bc1ffe9b6868e50a15f69.png" title=" And Se selecciona el medio de respuesta en Meta Datos" width="1920"/>
+                <img src="75fb97ef0baed007368d78dbf85b8c51a00ef7d00e2bc1ffe9b6868e50a15f69.png" title=" Actor cerrar mensajes interaction" width="1920"/>
+                <img src="75fb97ef0baed007368d78dbf85b8c51a00ef7d00e2bc1ffe9b6868e50a15f69.png" title=" actor clicks on Boton de la X para cerrar el mensaje" width="1920"/>
+                <img src="7bae56d7055e7ab5f50ebbf1f59639ce973e25b24483d313341fd9d35922b828.png" title=" actor clicks on Boton de la X para cerrar el mensaje" width="1920"/>
+                <img src="7bae56d7055e7ab5f50ebbf1f59639ce973e25b24483d313341fd9d35922b828.png" title=" Actor cerrar mensajes interaction (completed)" width="1920"/>
+                <img src="0b38b237335a7a67e7a7d6a447aaa8411ae713823ed4d0066fdfbb30047642c7.png" title=" Actor meta datos task" width="1920"/>
+                <img src="0b38b237335a7a67e7a7d6a447aaa8411ae713823ed4d0066fdfbb30047642c7.png" title=" actor clicks on Boton Documento Electonico" width="1920"/>
+                <img src="3dfd27399d722a547f8968413c063f475437f7f45ee59eb4781316372bff780b.png" title=" actor clicks on Boton Documento Electonico" width="1920"/>
+                <img src="d6c383db165c60a264d1cfc7956132a1fe02573641b4eba2efe17221c5502fc3.png" title=" actor enters 'Correo electr&oacute;nico' then hits [TAB] into Boton Documento Electonico" width="1920"/>
+                <img src="7539a7199e17f8e4f42fb094c158712fb326a6bc08f786ef47e87cac11c5300d.png" title=" actor clicks on Campo asunto" width="1920"/>
+                <img src="7539a7199e17f8e4f42fb094c158712fb326a6bc08f786ef47e87cac11c5300d.png" title=" Actor meta datos task (completed)" width="1920"/>
+                <img src="7539a7199e17f8e4f42fb094c158712fb326a6bc08f786ef47e87cac11c5300d.png" title=" And Se selecciona el medio de respuesta en Meta Datos (completed)" width="1920"/>
+                <img src="264ac645621b528496ecbf7e59d985fe051aa61c3a73d526a7c78ac39f98bc67.png" title=" Then Se valida que se guardo correctamente los metadatos" width="1920"/>
+                <img src="264ac645621b528496ecbf7e59d985fe051aa61c3a73d526a7c78ac39f98bc67.png" title=" Then validar contenido texto question" width="1920"/>
+                <img src="264ac645621b528496ecbf7e59d985fe051aa61c3a73d526a7c78ac39f98bc67.png" title=" Then Se valida que se guardo correctamente los metadatos (completed)" width="1920"/>
+                <img src="40b9f484fe7705418b6eeff744849f2d41f7f7475759e06d91bcb0c3197e1a6d.png" title=" When Se da clic en Documento" width="1920"/>
+                <img src="40b9f484fe7705418b6eeff744849f2d41f7f7475759e06d91bcb0c3197e1a6d.png" title=" Actor cerrar mensajes interaction" width="1920"/>
+                <img src="40b9f484fe7705418b6eeff744849f2d41f7f7475759e06d91bcb0c3197e1a6d.png" title=" actor clicks on Boton de la X para cerrar el mensaje" width="1920"/>
+                <img src="4a8deeaf2819d4365f9f8a96fa754de7ac5bc27d317bbc5c7070b6e6fbabae19.png" title=" actor clicks on Boton de la X para cerrar el mensaje" width="1920"/>
+                <img src="4a8deeaf2819d4365f9f8a96fa754de7ac5bc27d317bbc5c7070b6e6fbabae19.png" title=" Actor cerrar mensajes interaction (completed)" width="1920"/>
+                <img src="671eda79531e7e614a30ce8f8411458172c40d57eb33f5ce825ac599020d4cff.png" title=" Actor documento task" width="1920"/>
+                <img src="671eda79531e7e614a30ce8f8411458172c40d57eb33f5ce825ac599020d4cff.png" title=" actor clicks on Pestana Documento" width="1920"/>
+                <img src="671eda79531e7e614a30ce8f8411458172c40d57eb33f5ce825ac599020d4cff.png" title=" Actor documento task (completed)" width="1920"/>
+                <img src="671eda79531e7e614a30ce8f8411458172c40d57eb33f5ce825ac599020d4cff.png" title=" When Se da clic en Documento (completed)" width="1920"/>
+                <img src="97b742a9470fe5bb4bb5359cd28370755b62b0d6fee5e5700d712ac430f81ef4.png" title=" And Se da clic en aprobar" width="1920"/>
+                <img src="97b742a9470fe5bb4bb5359cd28370755b62b0d6fee5e5700d712ac430f81ef4.png" title=" Actor aprobar task" width="1920"/>
+                <img src="97b742a9470fe5bb4bb5359cd28370755b62b0d6fee5e5700d712ac430f81ef4.png" title=" And Se da clic en aprobar (completed)" width="1920"/>
+                <img src="14fae693dc56b0b8467abe5253e127e6d2bfdbce3d96d9a3cbea9d23ad4d8695.png" title=" Then Se valida la aprobacion exitosa" width="1920"/>
+                <img src="14fae693dc56b0b8467abe5253e127e6d2bfdbce3d96d9a3cbea9d23ad4d8695.png" title=" Then validar texto question should be 'Documentos Electr&amp;oacute;nicos Aprobados'" width="1920"/>
+                <img src="2c1cfcfdcb4686282b15bfffb8b4d16c8799ffc23727f375d609df4e939cc32e.png" title=" Actor cerrar mensajes interaction" width="1920"/>
+                <img src="2c1cfcfdcb4686282b15bfffb8b4d16c8799ffc23727f375d609df4e939cc32e.png" title=" actor clicks on Boton de la X para cerrar el mensaje" width="1920"/>
+                <img src="6cf0e878afc82ef48e12ab1b114464af9850e52dc8c25b7b415e33e3589fb1d5.png" title=" actor clicks on Boton de la X para cerrar el mensaje" width="1920"/>
+                <img src="6cf0e878afc82ef48e12ab1b114464af9850e52dc8c25b7b415e33e3589fb1d5.png" title=" Actor cerrar mensajes interaction (completed)" width="1920"/>
+                <img src="6cf0e878afc82ef48e12ab1b114464af9850e52dc8c25b7b415e33e3589fb1d5.png" title=" Then Se valida la aprobacion exitosa (completed)" width="1920"/>
+                <img src="bcb277149fe52231f9ea8d4b62f3fb9a5027880213b149aeefa02093f9408fe6.png" title=" When Se da clic en el boton radicar documento electronico" width="1920"/>
+                <img src="bcb277149fe52231f9ea8d4b62f3fb9a5027880213b149aeefa02093f9408fe6.png" title=" Actor radicar documento task" width="1920"/>
+                <img src="bcb277149fe52231f9ea8d4b62f3fb9a5027880213b149aeefa02093f9408fe6.png" title=" When Se da clic en el boton radicar documento electronico (completed)" width="1920"/>
+                <img src="ca2f3f8109dd1aba45b3d89d3a377bf21127da87c7337798fd8e478b30186237.png" title=" Then Se valida las radicaciones exitosas" width="1920"/>
+                <img src="ca2f3f8109dd1aba45b3d89d3a377bf21127da87c7337798fd8e478b30186237.png" title=" Then validar texto question should be 'Documentos radicados:'" width="1920"/>
+                <img src="ca2f3f8109dd1aba45b3d89d3a377bf21127da87c7337798fd8e478b30186237.png" title=" Then Se valida las radicaciones exitosas (completed)" width="1920"/>
+                <img src="6846c75b2e49f838b5846c22ddeeb94fa9a8e68d674c662bb36b8d79a0bb1caa.png" title=" 1: Se valida la opci&oacute;n documento electronico basico combinado ({fila=2, destinatarios=AUT ALEX}) (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.7.0</span>
+</div>
+</body>
+</html>
